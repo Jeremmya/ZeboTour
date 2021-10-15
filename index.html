@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ZeboTour</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <img src="curise-logo.png" class="logo">
+      <nav>
+        <ul id="menuList">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="">О Нас</a></li>
+          <li><a href="">Sale</a></li>
+          <li><a href="">Связатся с нами</a></li>
+        </ul>
+      </nav>
+      <img src="menu-577-1150114.png" class="menu-icon" onclick="togglemenu()">
+    </div>
+
+    <div class="row">
+      <div class="col-1">
+        <h2>Путешествуй<br>С 50% Скидкой</h2>
+        <h3>с доступом к более чем <br>5,500 направлениям по всему миру</h3>
+        <p>Одновременно зарабатывай <br>вместе с нами</p>
+        <h4></h4>
+        <button type="button">Связатся с нами</button>
+      </div>
+
+      <div class="col-2">
+        <img src="boat.jpg" class="controller">
+        <div class="maindiv"></div>
+      </div>
+    </div>
+  </div>
+
+<form action="mailto:zebo_makhmudova66@mail.ru" method="post" enctype="multipart/form-data">
+  <div class="contain">
+    <div class="contact-box">
+      <div class="left"></div>
+      <div class="right">
+        <h2>Contact Us</h2>
+        <input type="text" class="field" placeholder="Your Name">
+        <input type="email" class="field" placeholder="Your Email">
+        <input type="text" class="field" placeholder="Your Phone">
+        <textarea class="field area" placeholder="Message"></textarea>
+        <button class="btn" type="submit" value="Submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+
+  <script>
+    var menuList = document.getElementById("menuList");
+    menuList.style.maxHeight = "0px";
+    function togglemenu(){
+      if(menuList.style.maxHeight == "0px")
+      {
+        menuList.style.maxHeight = "130px";
+      }
+      else
+      {
+        menuList.style.maxHeight = "0px";
+      }
+    }
+  </script>
+</body>
+</html>

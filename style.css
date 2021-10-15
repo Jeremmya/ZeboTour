@@ -1,0 +1,322 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container{
+	width: 100%;
+	min-height: 100vh;
+	padding-left: 0;
+	padding-right: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.navbar{
+	width: 100%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+}
+.logo{
+	width: 140px;
+	padding-left: 0;
+	padding-top: 10%;
+	cursor: pointer;
+	margin: 20px 0px;
+}
+.menu-icon{
+	width: 45px;
+	padding-right: 1%;
+	padding-top: 10%;
+	cursor: pointer;
+	display: none;
+}
+nav{
+	flex: 1;
+	text-align: right;
+}
+nav ul li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 30px;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #000;
+	font-size: 14px;
+}
+nav ul li a:hover{
+	color: #ff5ea5;
+}
+.row{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 100px 0;
+}
+.col-1{
+	flex-basis: 40%;
+	position: relative;
+	margin-left: 50px;
+	left: -30px;
+	top: 0px;
+}
+.col-1 h2{
+	font-size: 54px;
+}
+.col-1 h3{
+	font-size: 30px;
+	color: #707070;
+	font-weight: 100;
+	margin: 20px 0 10px;
+}
+.col-1 p{
+	font-size: 16px;
+	color: #b7b7b7;
+	font-weight: 100;
+}
+.col-1 h4{
+	margin: 30px 0;
+	font-size: 20px;
+}
+.row button{
+	width: 140px;
+	border: 0;
+	padding: 12px 10px;
+	outline: none;
+	color: #ffff;
+	background: linear-gradient(to right, #2003fc, #03fce8);
+	transition: width 0.5s;
+}
+.col-1::after{
+	content:'';
+	width: 10px;
+	height: 57%;
+	background: linear-gradient(to bottom, #2003fc, #03fce8);
+	position: absolute;
+	left: -30px;
+	top: 8px;
+}
+.col-2{
+	position: relative;
+	flex-basis: 60%;
+	display: flex;
+	align-items: center;
+}
+.col-2 .controller{
+	width: 90%;
+
+}
+.maindiv
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-image: url(./city1.jpg);
+	background-size: 100% 100%;
+	box-shadow: 1px 2px 10px 10px white;
+	animation: slider 12s infinite linear;
+}
+
+
+.contain{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	height: 100%;
+	padding:20px 100px;
+}
+
+.contain:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background-size: cover;
+	z-index: 1;
+	filter: blur(50px);
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+.left{
+	height: 100%;
+	background: url(travell.jpg) no-repeat center;
+	background-size: cover;
+}
+.right{
+	padding: 25px 50px;
+	padding-left: 25px;
+}
+.contain h2{
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.contain h2:after{
+	content: '';
+	position: absolute;
+	left: 40%;
+	bottom: 0;
+	transform: translateY(-50%);
+	height: 4px;
+	width: 50px;
+	border-radius: 2px;
+	background-color: #2ecc71;
+}
+.field{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	outline: none;
+	background-color: rgba(230, 230,230, 0.6);
+	border: 2px solid rgba(0, 0, 0, 0);
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.field:focus{
+	background-color: #fff;
+	border: 2px solid rgba(30, 85, 250, 0.47);
+}
+.area{
+	min-height: 150px;
+}
+.btn{
+	width: 80%;
+	padding: 0.5rem 2rem;
+	font-size: 1.1rem;
+	background-color: #2ecc71;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: #fff;
+	transition: .3s;
+
+}
+.btn:hover{
+	background-color: #27ae60;
+}
+
+@keyframes slider
+{
+	0%{ background-image: url(./city2.jpg); }
+	20%{ background-image: url(./city3.jpg); }
+	40%{ background-image: url(./city4.jpg); }
+	80%{ background-image: url(./city5.jpg); }
+
+}
+
+@media only screen and (max-width:700px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+	.contain{
+		padding: 10px 40px;
+	}
+		
+	
+
+
+
+
+	nav ul{
+		width: 100%;
+		background: linear-gradient(to right, #03fce8, #2003fc);
+		position: absolute;
+		top: 75px;
+		right: 0;
+		z-index: 2;
+	}
+	nav ul li{
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	nav ul li a{
+		color: #fff;
+	}
+	.menu-icon{
+		display: block;
+	}
+	#menuList{
+		overflow: hidden;
+		transition: 0.5s;
+	}
+	.row{
+		flex-direction: column-reverse;
+		margin: 50px 0;
+	}
+	.col-2{
+		flex-basis: 100%;
+		margin-bottom: 50px;
+	}
+	.col-2 .controller{
+		width: 100%;
+	}
+	.col-1{
+		flex-basis: 100%;
+		margin-left: 0px;
+	}
+	.col-1 h2{
+		font-size: 35px;
+	}
+	.col-1 h3{
+		font-size: 15px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
